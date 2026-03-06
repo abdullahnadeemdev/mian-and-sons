@@ -11,4 +11,6 @@
 
     --font-sans: "Google Sans", ui-sans-serif, system-ui, sans-serif;
     --font-mono: "Source Code Pro", ui-monospace, monospace;
+
+      --breakpoint-xs:26.56rem;
 }
