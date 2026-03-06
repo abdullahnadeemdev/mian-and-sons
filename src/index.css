@@ -1,1 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 @import "tailwindcss"
+
+@theme{
+    --color-primary:#1E3A8A;
+    --color-accent:#F97316;
+    --color-secondary:#0EA5E9;
+    --color-background:#F8FAFC;
+    --color-dark:#0F172A;
+
+
+    --font-sans: "Google Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "Source Code Pro", ui-monospace, monospace;
+}
