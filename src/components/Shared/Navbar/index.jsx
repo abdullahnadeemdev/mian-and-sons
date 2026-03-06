@@ -3,7 +3,7 @@ import Button from "../Button";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between px-6 py-4 border-b">
+    <div className="flex items-center justify-between px-6 py-4">
       <div className="h-12! w-20!">
         <img
           src={logo}
@@ -13,7 +13,7 @@ const Navbar = () => {
       </div>
 
       <nav>
-        <ul className="flex gap-6 text-dark font-semibold font-sans">
+        <ul className="flex gap-3 text-sm lg:text-base lg:gap-6 text-dark font-semibold font-sans items-center">
           <li className="hover:text-secondary cursor-pointer">Home</li>
           <li className="hover:text-secondary cursor-pointer">Services</li>
           <li className="hover:text-secondary cursor-pointer">Projects</li>
