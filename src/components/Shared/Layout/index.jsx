@@ -1,10 +1,12 @@
-import React from "react";
 import Navbar from "../Navbar";
+import Footer from "../Footer";
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
     <div className="bg-background ">
       <Navbar />
+      <div className="h-screen">{children}</div>
+      <Footer />
     </div>
   );
 };
