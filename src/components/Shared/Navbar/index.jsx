@@ -8,7 +8,7 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
   return (
     <>
-      <div className=" items-center justify-between px-6 py-4 hidden sm:flex">
+      <div className="sticky top-0 items-center justify-between px-6 py-4 hidden sm:flex z-100 bg-background">
         <div className="h-12! w-20!">
           <img
             src={logo}
