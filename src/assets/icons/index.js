@@ -4,3 +4,6 @@ export { Location } from "./Location";
 export { Phone } from "./Phone";
 export { Email } from "./Email";
 export { LeftArrow } from "./LeftArrow";
+export { Construction } from "./Construction";
+export { Handshake } from "./Handshake";
+export { Design } from "./Design";
