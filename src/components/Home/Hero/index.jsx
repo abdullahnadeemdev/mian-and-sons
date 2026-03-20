@@ -1,10 +1,11 @@
 import { homeOne } from "../../../assets/images";
 import { LeftArrow } from "../../../assets/icons";
 import Button from "../../Shared/Button";
+import Stats from "./Stats";
 
 const Hero = () => {
   return (
-    <div>
+    <div className="relative">
       <div className="h-screen flex items-center justify-center relative">
         <div className="bg-black/75 absolute flex items-center justify-center font-semibold z-10 h-screen w-full"></div>
         <div className="absolute z-20 flex flex-col items-center gap-6 text-background">
@@ -33,6 +34,10 @@ const Hero = () => {
         </div>
 
         <img src={homeOne} alt="" className="h-full w-full object-cover" />
+      </div>
+
+      <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 mx-auto z-10 bg-background py-8 rounded-2xl shadow-4xl w-[80vw]">
+        <Stats />
       </div>
     </div>
   );
