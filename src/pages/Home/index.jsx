@@ -1,10 +1,12 @@
 import React from "react";
 import Hero from "../../components/Home/Hero";
+import Expertise from "../../components/Home/Expertise";
 
 const Home = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-15">
       <Hero />
+      <Expertise />
     </div>
   );
 };

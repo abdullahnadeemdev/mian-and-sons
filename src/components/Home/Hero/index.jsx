@@ -36,7 +36,7 @@ const Hero = () => {
         <img src={homeOne} alt="" className="h-full w-full object-cover" />
       </div>
 
-      <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 mx-auto z-10 bg-background py-8 rounded-2xl shadow-4xl w-[80vw]">
+      <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 mx-auto z-20 ">
         <Stats />
       </div>
     </div>

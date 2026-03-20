@@ -2,7 +2,7 @@ import React from "react";
 
 const Stats = () => {
   return (
-    <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-around">
+    <ul className="grid grid-cols-2 bg-background py-8 rounded-2xl w-[80vw] md:grid-cols-4 gap-4 justify-around shadow-xl shadow-dark/20">
       <li className="text-center">
         <p className="text-primary  font-bold text-lg sm:text-2xl lg:text-4xl">
           30+
