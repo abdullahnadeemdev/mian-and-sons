@@ -8,18 +8,18 @@ const Hero = () => {
       <div className="h-screen flex items-center justify-center relative">
         <div className="bg-black/75 absolute flex items-center justify-center font-semibold z-10 h-screen w-full"></div>
         <div className="absolute z-20 flex flex-col items-center gap-6 text-background">
-          <span className="bg-secondary text-sm px-4 py-1 rounded-2xl font-medium  w-fit ">
+          <span className="bg-secondary text-xs sm:text-sm lg:text-base px-4 py-1 rounded-2xl font-medium w-fit tracking-wider">
             ESTABLISHED 1994
           </span>
 
-          <p className="text-5xl font-bold w-300 text-center px-60">
+          <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold max-w-4xl text-center leading-tight">
             BUILDING EXCELLENCE FOR{" "}
             <span className="text-secondary">30+ YEARS</span> IN PAKISTAN
-          </p>
+          </h1>
 
-          <p className="text-background/80 text-lg px-40 w-200 text-center ">
+          <p className="text-background/80 text-sm md:text-lg lg:text-xl max-w-2xl text-center leading-relaxed">
             From luxury custom designs to state-of-the-art construction, we
-            bring your vision of a perfect home to life
+            bring your vision of a perfect home to life.
           </p>
 
           <div className="flex gap-6">
