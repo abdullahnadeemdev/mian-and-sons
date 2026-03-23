@@ -9,7 +9,6 @@ const Methodology = () => {
         OUR METHODOLOGY
       </p>
       <p className="text-lg md:text-3xl  font-semibold text-center">
-        {" "}
         The Seamless Journey to Excellence
       </p>
 
