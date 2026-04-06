@@ -15,6 +15,8 @@ const Portfolio = () => {
             src={homeOne}
             alt=""
             className="h-full w-full object-cover rounded-2xl"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
@@ -24,6 +26,8 @@ const Portfolio = () => {
               src={homeOne}
               alt=""
               className="h-full w-full object-cover rounded-2xl"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
@@ -33,6 +37,8 @@ const Portfolio = () => {
                 src={homeOne}
                 alt=""
                 className="h-full w-full object-cover rounded-2xl"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="">
@@ -40,6 +46,8 @@ const Portfolio = () => {
                 src={homeOne}
                 alt=""
                 className="h-full w-full object-cover rounded-2xl"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

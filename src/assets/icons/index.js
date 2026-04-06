@@ -7,3 +7,4 @@ export { LeftArrow } from "./LeftArrow";
 export { Construction } from "./Construction";
 export { Handshake } from "./Handshake";
 export { Design } from "./Design";
+export { Check } from "./Check";

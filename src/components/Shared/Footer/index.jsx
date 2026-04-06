@@ -28,6 +28,8 @@ const Footer = () => {
               src={logo}
               alt="Mian & Sons Construction logo"
               className="w-full h-full object-contain "
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <p className="text-sm lg:text-base leading-relaxed">

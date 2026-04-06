@@ -33,7 +33,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <img src={homeOne} alt="" className="h-full w-full object-cover" />
+        <img src={homeOne} alt="" className="h-full w-full object-cover" fetchPriority="high" decoding="async" />
       </div>
 
       <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 mx-auto z-20 ">

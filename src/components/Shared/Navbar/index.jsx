@@ -3,28 +3,46 @@ import { Menu } from "../../../assets/icons";
 import { Close } from "../../../assets/icons";
 import Button from "../Button";
 import { useState } from "react";
+import { Link } from "react-router";
+
+const NAV_LINKS = [
+  { label: "Home", to: "/" },
+  { label: "Services", to: "/services" },
+  { label: "Projects", to: "/portfolio" },
+  { label: "About", to: "/about" },
+];
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
   return (
     <>
       <div className="sticky top-0 items-center justify-between px-6 py-4 hidden sm:flex z-100 bg-background">
-        <div className="h-12! w-20!">
+        <Link to="/" className="h-12! w-20!">
           <img
             src={logo}
             alt="Mian & Sons Construction Logo"
             className="h-full w-full object-contain scale-210 "
+            fetchPriority="high"
+            decoding="async"
           />
-        </div>
+        </Link>
 
         <nav>
           <ul className="flex gap-3 text-sm lg:text-base lg:gap-6 text-dark font-semibold font-sans items-center">
-            <li className="hover:text-secondary cursor-pointer">Home</li>
-            <li className="hover:text-secondary cursor-pointer">Services</li>
-            <li className="hover:text-secondary cursor-pointer">Projects</li>
-            <li className="hover:text-secondary cursor-pointer">About</li>
-            <li className="hover:text-secondary cursor-pointer">
-              <Button>Get a Quote</Button>
+            {NAV_LINKS.map((link) => (
+              <li key={link.label}>
+                <Link
+                  to={link.to}
+                  className="hover:text-secondary cursor-pointer transition-colors"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link to="/contact">
+                <Button>Get a Quote</Button>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -32,15 +50,19 @@ const Navbar = () => {
 
       {!menu && (
         <div className="flex items-center justify-between px-6 py-4 sm:hidden">
-          <div className="h-8! w-12">
+          <Link to="/" className="h-8! w-12">
             <img
               src={logo}
               alt="Mian & Sons Construction Logo"
               className="h-full w-full object-contain scale-220 "
+              fetchPriority="high"
+              decoding="async"
             />
-          </div>
+          </Link>
           <div className="flex items-center gap-2">
-            <Button className={"px-2 py-1 text-sm!"}>Contact</Button>
+            <Link to="/contact">
+              <Button className={"px-2 py-1 text-sm!"}>Contact</Button>
+            </Link>
             <Menu onClick={() => setMenu(!menu)} />
           </div>
         </div>
@@ -53,11 +75,17 @@ const Navbar = () => {
             onClick={() => setMenu(!menu)}
           />
           <ul className="flex flex-col h-screen justify-center text-2xl w-screen gap-6 text-dark font-semibold font-sans items-center">
-            <li className="hover:text-secondary cursor-pointer">Home</li>
-            <li className="hover:text-secondary cursor-pointer">Services</li>
-            <li className="hover:text-secondary cursor-pointer">Projects</li>
-            <li className="hover:text-secondary cursor-pointer">About</li>
-            <li className="hover:text-secondary cursor-pointer"></li>
+            {NAV_LINKS.map((link) => (
+              <li key={link.label}>
+                <Link
+                  to={link.to}
+                  className="hover:text-secondary cursor-pointer transition-colors"
+                  onClick={() => setMenu(false)}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       )}

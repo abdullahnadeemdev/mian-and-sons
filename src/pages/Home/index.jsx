@@ -3,6 +3,7 @@ import Hero from "../../components/Home/Hero";
 import Expertise from "../../components/Home/Expertise";
 import Methodology from "../../components/Home/Methodology";
 import Portfolio from "../../components/Home/Portfolio";
+import Pitch from "../../components/Home/Pitch";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Expertise />
       <Methodology />
       <Portfolio />
+      <Pitch />
     </div>
   );
 };

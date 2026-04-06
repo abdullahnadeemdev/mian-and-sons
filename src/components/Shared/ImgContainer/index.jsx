@@ -12,6 +12,8 @@ const ImgContainer = ({ title, desc, img }) => {
         src={img}
         alt=""
         className="h-full rounded-2xl w-full object-cover"
+        loading="lazy"
+        decoding="async"
       />
     </div>
   );
