@@ -1,17 +1,27 @@
 import { logo } from "../../../assets/images";
 import { Email, Phone, Location } from "../../../assets/icons";
+import { Link } from "react-router";
 
 const QUICK_LINKS = [
-  { id: 1, label: "Portfolio", href: "#portfolio" },
-  { id: 2, label: "Our Process", href: "#process" },
-  { id: 3, label: "Careers", href: "#careers" },
-  { id: 4, label: "Privacy Policy", href: "#privacy" },
+  { id: 1, label: "Home", to: "/" },
+  { id: 2, label: "Services", to: "/services" },
+  { id: 3, label: "Portfolio", to: "/portfolio" },
+  { id: 4, label: "About Us", to: "/about" },
+  { id: 5, label: "Contact", to: "/contact" },
 ];
 
 const CONTACT_INFO = [
-  { id: 1, icon: Location, text: "Johar Town R1" },
-  { id: 2, icon: Phone, text: "+92 3218432834" },
-  { id: 3, icon: Email, text: "info@miansons.com.pk" },
+  { id: 1, icon: Location, text: "Lahore, Pakistan" },
+  { id: 2, icon: Phone, text: "+92 321-8432834" },
+  { id: 3, icon: Email, text: "nadeemaziz1971@gmail.com" },
+];
+
+const SERVICE_AREAS = [
+  "DHA (All Phases)",
+  "Bahria Town",
+  "Bahria Orchard",
+  "Gulberg",
+  "Johar Town",
 ];
 
 const Footer = () => {
@@ -33,8 +43,8 @@ const Footer = () => {
             />
           </div>
           <p className="text-sm lg:text-base leading-relaxed">
-            Pioneering the future of construction in Pakistan since 2004. We
-            build for tomorrow, with the strength of today.
+            Quality Work is Our Motto. Building luxury homes with generational
+            trust since 2000. 26+ years of uncompromising excellence in Lahore.
           </p>
         </div>
 
@@ -44,15 +54,29 @@ const Footer = () => {
           <ul className="flex flex-col gap-3">
             {QUICK_LINKS.map((link) => (
               <li key={link.id}>
-                <a href={link.href} className={linkClass}>
+                <Link to={link.to} className={linkClass}>
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Column 3: Contact Info */}
+        {/* Column 3: Service Areas */}
+        <div className="w-full sm:w-auto">
+          <h3 className="font-semibold text-lg lg:text-xl mb-4">
+            Service Areas
+          </h3>
+          <ul className="flex flex-col gap-3">
+            {SERVICE_AREAS.map((area) => (
+              <li key={area} className={linkClass}>
+                📍 {area}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Column 4: Contact Info */}
         <div className="w-full sm:w-auto">
           <h3 className="font-semibold text-lg lg:text-xl mb-4">
             Contact Info
@@ -73,7 +97,7 @@ const Footer = () => {
       <div className="bg-dark text-center py-4 text-xs sm:text-sm text-grey">
         <p>
           © {new Date().getFullYear()} Mian & Sons Construction. All rights
-          reserved.
+          reserved. | Quality Work is Our Motto
         </p>
       </div>
     </footer>

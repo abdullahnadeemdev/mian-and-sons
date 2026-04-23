@@ -80,29 +80,26 @@ const OurStory = () => (
           variants={fadeUp}
           className="text-3xl md:text-4xl font-bold text-dark leading-snug"
         >
-          Three Decades of Shaping{" "}
-          <span className="text-primary">Pakistan's Skyline</span>
+          A Legacy Built on{" "}
+          <span className="text-primary">Family Integrity</span>
         </motion.h2>
 
         <motion.div variants={fadeUp} className="space-y-5 text-dark/70 leading-relaxed text-sm md:text-base">
           <p>
-            Founded in 1994, Mian &amp; Sons began as a small family-run
-            contracting business in the heart of Lahore. What started with
-            residential renovations has grown into one of Pakistan's most
-            trusted names in commercial and luxury construction.
+            Our company is built on the foundation of <strong>"Family Integrity."</strong> Our
+            skills were passed down from our father, Haji Muhammad Aziz (Late), who taught us that
+            honesty in material and precision in work are the only ways to build a name.
           </p>
           <p>
-            Over <span className="font-mono font-semibold text-dark">30+</span>{" "}
-            years and <span className="font-mono font-semibold text-dark">500+</span>{" "}
-            successful projects later, our commitment to quality craftsmanship,
-            on-time delivery, and transparent communication remains the
-            cornerstone of everything we build.
+            Today, with <span className="font-mono font-semibold text-dark">26+</span> years of
+            on-ground expertise and <span className="font-mono font-semibold text-dark">200+</span>{" "}
+            luxury projects completed, we continue this legacy by blending traditional values with
+            modern engineering. We don't just build houses — we construct legacies.
           </p>
           <p>
-            From high-rise towers in DHA to sprawling industrial complexes, our
-            portfolio speaks to a relentless pursuit of excellence — backed by a
-            team of <span className="font-mono font-semibold text-dark">200+</span>{" "}
-            skilled professionals.
+            Our unique guarantee is <strong>100% adherence to architectural drawings</strong>,
+            utilizing a permanent team that has been with us for over 25 years to ensure every
+            brick is laid with mastered skill and every structure stands the test of time.
           </p>
         </motion.div>
 
@@ -112,9 +109,9 @@ const OurStory = () => (
           className="flex gap-8 mt-4 pt-6 border-t border-dark/10"
         >
           {[
-            { value: "30+", label: "Years" },
-            { value: "500+", label: "Projects" },
-            { value: "200+", label: "Team" },
+            { value: "26+", label: "Years" },
+            { value: "200+", label: "Projects" },
+            { value: "100%", label: "Permanent Staff" },
           ].map((s) => (
             <div key={s.label}>
               <p className="font-mono text-2xl md:text-3xl font-bold text-primary">
@@ -185,8 +182,8 @@ const OurStory = () => (
   </section>
 );
 
-// ─── Our Mission ─────────────────────────────────────────────────────────────
-const OurMission = () => (
+// ─── The Team ────────────────────────────────────────────────────────────────
+const TheTeam = () => (
   <section className="py-24 px-6 md:px-12 lg:px-20 bg-slate-50 border-t border-dark/5">
     <div className="max-w-4xl mx-auto text-center">
       <motion.div
@@ -199,35 +196,51 @@ const OurMission = () => (
           variants={fadeUp}
           className="text-accent font-semibold tracking-widest text-sm uppercase"
         >
-          Our Mission
+          Our Team
         </motion.span>
         <motion.h2
           variants={fadeUp}
           className="text-3xl md:text-4xl font-bold text-dark mt-3 leading-snug"
         >
-          To construct with <span className="text-primary">Integrity</span>, deliver with <span className="text-accent">Excellence</span>, and build <span className="text-primary">Lasting Trust</span>.
+          A <span className="text-primary">Permanent</span> Team, Not Daily Wagers
         </motion.h2>
         <motion.p
           variants={fadeUp}
           className="mt-6 text-dark/70 leading-relaxed text-base md:text-lg"
         >
-          We don't just build structures; we build the future. Our core mission is to empower communities through sustainable, innovative, and state-of-the-art construction, creating enduring legacies that stand the test of time.
+          Unlike companies that hire daily wagers, we boast a permanent staff that has been
+          working with us for over two decades. They understand our standards of "Leveling"
+          and "Strength" better than anyone else in the market. This consistency is what
+          delivers our signature quality on every project.
         </motion.p>
       </motion.div>
     </div>
   </section>
 );
 
-// ─── Core Values ─────────────────────────────────────────────────────────────
-const VALUES = [
-  { icon: Shield, title: "Uncompromising Quality", desc: "We use premium materials and enforce strict quality control at every stage." },
-  { icon: Target, title: "On-Time Delivery", desc: "Precision planning guarantees that your project is completed on schedule." },
-  { icon: Users, title: "Client-Centric Approach", desc: "Transparent communication ensures you are informed and confident." },
-  { icon: Zap, title: "Innovation", desc: "We leverage modern technology and sustainable practices for future-proof builds." }
-];
-
-const CoreValues = () => (
+// ─── Guarantees ──────────────────────────────────────────────────────────────
+const Guarantees = () => (
   <section className="py-24 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={stagger}
+      className="text-center mb-12"
+    >
+      <motion.span
+        variants={fadeUp}
+        className="text-accent font-semibold tracking-widest text-sm uppercase"
+      >
+        Our Guarantee
+      </motion.span>
+      <motion.h2
+        variants={fadeUp}
+        className="text-3xl md:text-4xl font-bold text-dark mt-3"
+      >
+        We Stand Behind Every Brick
+      </motion.h2>
+    </motion.div>
     <motion.div
       initial="hidden"
       whileInView="visible"
@@ -235,7 +248,28 @@ const CoreValues = () => (
       variants={stagger}
       className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
     >
-      {VALUES.map((val, i) => (
+      {[
+        {
+          icon: Shield,
+          title: "Structural Warranty",
+          desc: "We offer a structural warranty and continued support. Even after you move in, we remain available for any technical adjustments.",
+        },
+        {
+          icon: Target,
+          title: "100% Drawing Accuracy",
+          desc: "We guarantee complete adherence to your architect's drawings. Every measurement is cross-checked against the map.",
+        },
+        {
+          icon: Users,
+          title: "Transparent Communication",
+          desc: "From quotation to handover, we keep you informed at every stage. No hidden costs, no surprises.",
+        },
+        {
+          icon: Zap,
+          title: "Premium Materials",
+          desc: "A-Class bricks, 60-Grade steel, high-pressure PPRC pipes, and 99.9% pure copper wiring — we never compromise.",
+        },
+      ].map((val, i) => (
         <motion.div
           key={val.title}
           variants={fadeUp}
@@ -250,6 +284,78 @@ const CoreValues = () => (
         </motion.div>
       ))}
     </motion.div>
+  </section>
+);
+
+// ─── Core Values ─────────────────────────────────────────────────────────────
+const CoreValues = () => (
+  <section className="py-24 px-6 md:px-12 lg:px-20 bg-slate-50 border-t border-dark/5">
+    <div className="max-w-5xl mx-auto">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={stagger}
+        className="text-center mb-14"
+      >
+        <motion.span
+          variants={fadeUp}
+          className="text-accent font-semibold tracking-widest text-sm uppercase"
+        >
+          Core Values
+        </motion.span>
+        <motion.h2
+          variants={fadeUp}
+          className="text-3xl md:text-4xl font-bold text-dark mt-3"
+        >
+          What Drives Us Every Day
+        </motion.h2>
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={stagger}
+        className="grid sm:grid-cols-2 gap-8"
+      >
+        {[
+          {
+            title: "Transparency",
+            desc: "No hidden costs, no surprises. We provide detailed quotations and keep you informed at every stage of your project.",
+            emoji: "🔍",
+          },
+          {
+            title: "Generational Expertise",
+            desc: "Skills passed down from our founder — honesty in material and precision in work are the only ways to build a name.",
+            emoji: "👨‍👦",
+          },
+          {
+            title: "Technical Precision",
+            desc: "100% adherence to architectural drawings. Every step is cross-checked against the architect's map for structural accuracy.",
+            emoji: "📐",
+          },
+          {
+            title: "Quality is Our Motto",
+            desc: "We use only premium, tested materials and never cut corners. Our work speaks for itself across 200+ completed luxury homes.",
+            emoji: "🏆",
+          },
+        ].map((val, i) => (
+          <motion.div
+            key={val.title}
+            variants={fadeUp}
+            custom={i}
+            className="bg-white p-8 rounded-2xl shadow-lg shadow-black/5 border border-dark/5 flex gap-5 items-start hover:-translate-y-1 transition-transform duration-300"
+          >
+            <span className="text-3xl shrink-0 mt-1">{val.emoji}</span>
+            <div>
+              <h3 className="text-lg font-bold text-dark mb-2">{val.title}</h3>
+              <p className="text-dark/60 text-sm leading-relaxed">{val.desc}</p>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
   </section>
 );
 
@@ -335,7 +441,8 @@ const About = () => (
   >
     <MiniHero />
     <OurStory />
-    <OurMission />
+    <TheTeam />
+    <Guarantees />
     <CoreValues />
     <LeadershipTeam />
   </motion.div>

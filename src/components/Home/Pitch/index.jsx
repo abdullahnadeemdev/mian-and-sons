@@ -1,6 +1,25 @@
 import { homeOne } from "../../../assets/images";
 import { Check } from "../../../assets/icons";
 
+const REASONS = [
+  {
+    title: "100% Structural Accuracy",
+    desc: "Every brick is laid with precision — we guarantee 100% adherence to your architect's drawings and maps.",
+  },
+  {
+    title: "25+ Year Permanent Team",
+    desc: "Our staff has been with us for over 25 years. They understand our standards of leveling, strength, and finishing.",
+  },
+  {
+    title: "Premium Materials Only",
+    desc: "A-Class bricks, 60-Grade Mughal/Ittefaq steel, Turk Plast pipes, and 99.9% pure Pakistan Cables copper wiring.",
+  },
+  {
+    title: "Structural Warranty & Support",
+    desc: "We offer a structural warranty and remain available even after handover for any technical adjustments.",
+  },
+];
+
 const Pitch = () => {
   return (
     <div className="mb-15 bg-primary text-background">
@@ -11,47 +30,21 @@ const Pitch = () => {
           </p>
 
           <ul className="mt-5 md:mt-15 flex flex-col gap-4 ">
-            <li className="flex gap-4">
-              <div className=" px-2 md:px-3 md:py-1 flex items-center  justify-center rounded-full bg-secondary">
-                <Check />
-              </div>
-              <span>
-                <p className="font-bold text-base md:text-lg">
-                  Uncompromising Quality
-                </p>
-                <p className="font-extralight text-sm md:text-base">
-                  Lorem ipsum dolor sit amet.
-                </p>
-              </span>
-            </li>
-
-            <li className="flex gap-4">
-              <div className="px-2 md:px-3 md:py-1 flex items-center  justify-center rounded-full bg-secondary">
-                <Check />
-              </div>
-              <span>
-                <p className="font-bold  text-base md:text-lg">
-                  Uncompromising Quality
-                </p>
-                <p className="font-extralight text-sm md:text-base">
-                  Lorem ipsum dolor sit amet.
-                </p>
-              </span>
-            </li>
-
-            <li className="flex gap-4">
-              <div className="px-2 md:px-3 md:py-1 flex items-center  justify-center rounded-full bg-secondary">
-                <Check />
-              </div>
-              <span>
-                <p className="font-bold  text-base md:text-lg">
-                  Uncompromising Quality
-                </p>
-                <p className="font-extralight text-sm md:text-base ">
-                  Lorem ipsum dolor sit amet.
-                </p>
-              </span>
-            </li>
+            {REASONS.map((reason) => (
+              <li key={reason.title} className="flex gap-4">
+                <div className=" px-2 md:px-3 md:py-1 flex items-center  justify-center rounded-full bg-secondary">
+                  <Check />
+                </div>
+                <span>
+                  <p className="font-bold text-base md:text-lg">
+                    {reason.title}
+                  </p>
+                  <p className="font-extralight text-sm md:text-base">
+                    {reason.desc}
+                  </p>
+                </span>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -59,7 +52,7 @@ const Pitch = () => {
           <div className="aspect-6/4 max-h-140 ">
             <img
               src={homeOne}
-              alt=""
+              alt="Mian and Sons quality construction"
               className="h-full w-full object-cover rounded-2xl"
               loading="lazy"
               decoding="async"

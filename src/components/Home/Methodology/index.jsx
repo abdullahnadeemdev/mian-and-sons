@@ -6,39 +6,35 @@ const Methodology = () => {
   return (
     <div className="mx-auto mb-15">
       <p className="text-dark font-medium text-center text-xs sm:text-base">
-        OUR METHODOLOGY
+        HOW WE WORK
       </p>
       <p className="text-lg md:text-3xl  font-semibold text-center">
-        The Seamless Journey to Excellence
+        Your Journey to a Dream Home
       </p>
 
       <div className="mt-15 grid grid-cols-1 gap-3 xs:grid-cols-2 md:grid-cols-4 ">
         <Methods
           icon={<Email />}
-          title="Consultation"
-          desc="
-        Dive deep into your lifestyle and vision to define the project scope"
+          title="Call Us"
+          desc="Contact us via phone to share your requirements and house plan."
         />
 
         <Methods
           icon={<Design />}
-          title="Design"
-          desc="
-        Dive deep into your lifestyle and vision to define the project scope"
+          title="Get a Quote"
+          desc="We provide a transparent, detailed quotation based on your specific needs."
         />
 
         <Methods
           icon={<Construction />}
-          title="Construction"
-          desc="
-        Dive deep into your lifestyle and vision to define the project scope"
+          title="Meeting"
+          desc="We schedule an in-person meeting to finalize details and start planning."
         />
 
         <Methods
           icon={<Handshake />}
-          title="Handover"
-          desc="
-        Dive deep into your lifestyle and vision to define the project scope"
+          title="Build & Handover"
+          desc="We begin constructing your dream home with 100% structural accuracy."
         />
       </div>
     </div>
