@@ -2,7 +2,7 @@ import { logo } from "../../../assets/images";
 import { Menu } from "../../../assets/icons";
 import { Close } from "../../../assets/icons";
 import Button from "../Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
 
 const NAV_LINKS = [
@@ -14,9 +14,27 @@ const NAV_LINKS = [
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
+  const [color, setColor] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setColor(true);
+      } else {
+        setColor(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <div className="sticky top-0 items-center justify-between px-6 py-4 hidden sm:flex z-100 bg-background">
+      <div
+        className={`sticky top-0 items-center justify-between px-6 py-4 hidden ${color ? "bg-dark text-background" : "bg-background text-black"} sm:flex z-100`}
+      >
         <Link to="/" className="h-12! w-20!">
           <img
             src={logo}
@@ -28,7 +46,7 @@ const Navbar = () => {
         </Link>
 
         <nav>
-          <ul className="flex gap-3 text-sm lg:text-base lg:gap-6 text-dark font-semibold font-sans items-center">
+          <ul className="flex gap-3 text-sm lg:text-base lg:gap-6  font-semibold font-sans items-center">
             {NAV_LINKS.map((link) => (
               <li key={link.label}>
                 <Link
@@ -55,8 +73,6 @@ const Navbar = () => {
               src={logo}
               alt="Mian & Sons Construction Logo"
               className="h-full w-full object-contain scale-220 "
-              fetchPriority="high"
-              decoding="async"
             />
           </Link>
           <div className="flex items-center gap-2">
@@ -74,7 +90,7 @@ const Navbar = () => {
             className={" absolute self-end mt-2 mr-2"}
             onClick={() => setMenu(!menu)}
           />
-          <ul className="flex flex-col h-screen justify-center text-2xl w-screen gap-6 text-dark font-semibold font-sans items-center">
+          <ul className="flex flex-col h-screen justify-center text-2xl w-screen gap-6 font-semibold font-sans items-center">
             {NAV_LINKS.map((link) => (
               <li key={link.label}>
                 <Link
