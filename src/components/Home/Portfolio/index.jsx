@@ -3,14 +3,13 @@ import { PORTFOLIO_PROJECTS } from "../../../constants";
 import { Link } from "react-router";
 
 const Portfolio = () => {
-  // Show first 4 projects as a preview on the home page
   const previewProjects = PORTFOLIO_PROJECTS.slice(0, 4);
 
   return (
     <div>
-      <p className="text-2xl md:text-4xl xl:text-6xl font-bold text-primary text-center">
+      <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold text-primary text-center">
         Portfolio
-      </p>
+      </h1>
       <div className="h-2 w-17 mt-2 rounded-4xl bg-secondary mx-auto"></div>
       <p className="text-center text-dark/60 mt-4 max-w-xl mx-auto text-sm md:text-base px-6">
         200+ luxury homes completed across DHA, Bahria Town, Gulberg, and more.
@@ -26,10 +25,14 @@ const Portfolio = () => {
             loading="lazy"
             decoding="async"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6">
+          <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent flex items-end p-6">
             <div>
-              <p className="text-white font-bold text-lg">{previewProjects[0].title}</p>
-              <p className="text-white/70 text-sm">{previewProjects[0].location}</p>
+              <p className="text-white font-bold text-lg">
+                {previewProjects[0].title}
+              </p>
+              <p className="text-white/70 text-sm">
+                {previewProjects[0].location}
+              </p>
             </div>
           </div>
         </div>
@@ -43,10 +46,14 @@ const Portfolio = () => {
               loading="lazy"
               decoding="async"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+            <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
               <div>
-                <p className="text-white font-bold">{previewProjects[1].title}</p>
-                <p className="text-white/70 text-sm">{previewProjects[1].location}</p>
+                <p className="text-white font-bold">
+                  {previewProjects[1].title}
+                </p>
+                <p className="text-white/70 text-sm">
+                  {previewProjects[1].location}
+                </p>
               </div>
             </div>
           </div>
@@ -60,10 +67,14 @@ const Portfolio = () => {
                 loading="lazy"
                 decoding="async"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+              <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
                 <div>
-                  <p className="text-white font-bold text-sm">{previewProjects[2].title}</p>
-                  <p className="text-white/70 text-xs">{previewProjects[2].location}</p>
+                  <p className="text-white font-bold text-sm">
+                    {previewProjects[2].title}
+                  </p>
+                  <p className="text-white/70 text-xs">
+                    {previewProjects[2].location}
+                  </p>
                 </div>
               </div>
             </div>
@@ -75,10 +86,14 @@ const Portfolio = () => {
                 loading="lazy"
                 decoding="async"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
+              <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent flex items-end p-4">
                 <div>
-                  <p className="text-white font-bold text-sm">{previewProjects[3].title}</p>
-                  <p className="text-white/70 text-xs">{previewProjects[3].location}</p>
+                  <p className="text-white font-bold text-sm">
+                    {previewProjects[3].title}
+                  </p>
+                  <p className="text-white/70 text-xs">
+                    {previewProjects[3].location}
+                  </p>
                 </div>
               </div>
             </div>

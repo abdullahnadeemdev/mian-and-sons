@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div className="relative">
       <div className="h-screen flex items-center justify-center relative">
-        <div className="bg-black/75 absolute flex items-center justify-center font-semibold z-10 h-screen w-full"></div>
+        <div className="bg-black/75 rounded-2xl absolute flex items-center justify-center font-semibold z-10 h-screen w-full"></div>
         <div className="absolute z-20 flex flex-col items-center gap-6 text-background px-6">
           <span className="bg-secondary text-xs sm:text-sm lg:text-base px-4 py-1 rounded-2xl font-medium w-fit tracking-wider">
             QUALITY WORK IS OUR MOTTO
@@ -39,7 +39,13 @@ const Hero = () => {
           </div>
         </div>
 
-        <img src={homeOne} alt="Mian and Sons luxury construction" className="h-full w-full object-cover" fetchPriority="high" decoding="async" />
+        <img
+          src={homeOne}
+          alt="Mian and Sons luxury construction"
+          className="rounded-2xl h-full w-full object-cover"
+          fetchPriority="high"
+          decoding="async"
+        />
       </div>
 
       <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 mx-auto z-20 ">

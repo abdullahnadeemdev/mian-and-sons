@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 
 const Testimonials = () => {
   return (
-    <div className="py-20 px-6 max-w-7xl mx-auto text-center overflow-hidden">
+    <div className="px-6 max-w-7xl mx-auto text-center overflow-hidden">
       <h5 className="text-sm text-secondary font-bold tracking-widest uppercase mb-2">
         TESTIMONIALS
       </h5>

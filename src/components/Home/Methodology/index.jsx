@@ -5,13 +5,10 @@ import Methods from "../../Shared/Methods";
 const Methodology = () => {
   return (
     <div className="mx-auto mb-15">
-      <p className="text-dark font-medium text-center text-xs sm:text-base">
-        HOW WE WORK
-      </p>
-      <p className="text-lg md:text-3xl  font-semibold text-center">
+      <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold text-primary text-center">
         Your Journey to a Dream Home
-      </p>
-
+      </h1>{" "}
+      <div className="h-2 w-17 mt-2 rounded-4xl bg-secondary mx-auto"></div>
       <div className="mt-15 grid grid-cols-1 gap-3 xs:grid-cols-2 md:grid-cols-4 ">
         <Methods
           icon={<Email />}
