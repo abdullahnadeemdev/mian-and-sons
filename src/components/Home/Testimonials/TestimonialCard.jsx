@@ -1,26 +1,54 @@
 import React from "react";
-
-const TestimonialCard = ({ name, review, star, imgP, index }) => {
+import { Star } from "lucide-react";
+const TestimonialCard = ({ name, review, location, star, isActive }) => {
   return (
     <div
-      key={index}
-      className="flex flex-col gap-8 px-5 text-white  py-4 max-w-80 bg-primary rounded-2xl"
+      className={`p-8 rounded-2xl text-left transition-all duration-500 ease-in-out flex flex-col h-full ${
+        isActive
+          ? "bg-primary text-white shadow-2xl scale-105 z-10"
+          : "bg-white text-slate-800 shadow-md scale-95 opacity-70 cursor-pointer"
+      }`}
     >
-      <p className=" overflow-hidden text-base md:text-xl text-[#ff9800]">
-        {star}
+      <div className="flex gap-1 mb-6">
+        {[...Array(5)].map((_, i) => (
+          <Star
+            key={i}
+            size={20}
+            className={isActive ? "text-blue-400" : "text-blue-600"}
+            fill={i < star ? "currentColor" : "none"}
+          />
+        ))}
+      </div>
+
+      <p
+        className={`text-base md:text-lg italic mb-8 grow leading-relaxed ${
+          isActive ? "text-slate-200" : "text-slate-600"
+        }`}
+      >
+        "{review}"
       </p>
 
-      <p className="italic text-sm md:text-base">"{review}""</p>
-      <div className="flex items-center gap-5 text-lg font-semibold">
-        <div className="w-15 h-15 ">
+      <div className="flex items-center gap-4">
+        <div className="h-12 w-12 rounded-full overflow-hidden shrink-0 bg-slate-200">
           <img
-            src={imgP}
-            alt="avatar of customer"
-            className="object-cover w-full h-full rounded-full"
+            src={`https://ui-avatars.com/api/?name=${name}&background=random`}
+            alt={name}
+            className="h-full w-full object-cover"
           />
         </div>
 
-        <p className="text-sm md:text-base">{name}</p>
+        <div>
+          <h4
+            className={`font-bold text-lg ${isActive ? "text-white" : "text-dark"}`}
+          >
+            {name}
+          </h4>
+          <p
+            className={`text-sm ${isActive ? "text-slate-300" : "text-slate-500"}`}
+          >
+            {location}
+          </p>
+        </div>
       </div>
     </div>
   );

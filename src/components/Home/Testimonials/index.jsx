@@ -1,34 +1,53 @@
 import React from "react";
-import { homeOne } from "../../../assets/images";
 import TestimonialCard from "./TestimonialCard";
 import { TESTIMONIALS } from "../../../constants";
 
+import { Navigation, Pagination, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const index = () => {
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+const Testimonials = () => {
   return (
-    <div>
-      <h5 className="text-sm text-secondary">TESTIMONIALS</h5>
-      <h1 className="text-4xl font-extrabold mb-10">What Our Clients Say</h1>
+    <div className="py-20 px-6 max-w-7xl mx-auto text-center overflow-hidden">
+      <h5 className="text-sm text-secondary font-bold tracking-widest uppercase mb-2">
+        TESTIMONIALS
+      </h5>
+      <h1 className="text-4xl md:text-5xl font-extrabold text-dark mb-14">
+        What Our Clients Say
+      </h1>
+
       <Swiper
+        modules={[Navigation, Pagination, A11y]}
         spaceBetween={30}
-        slidesPerView={3}
-        onSlideChange={() => console.log("slide change")}
+        slidesPerView={1}
+        centeredSlides={true}
+        loop={true}
+        pagination={{ clickable: true }}
+        breakpoints={{
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        className="pb-16"
       >
-        <div className="flex gap-2">
-          {TESTIMONIALS.map((testimonial, index) => (
-            <TestimonialCard
-              name={testimonial.name}
-              review={testimonial.text}
-              star={testimonial.star}
-              imgP={testimonial.imgP}
-              index={index}
-            />
-          ))}
-        </div>
+        {TESTIMONIALS.map((testimonial, index) => (
+          <SwiperSlide key={testimonial.id || index}>
+            {({ isActive }) => (
+              <TestimonialCard
+                name={testimonial.name}
+                review={testimonial.text}
+                location={testimonial.location}
+                star={testimonial.rating}
+                isActive={isActive}
+              />
+            )}
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
 };
 
-export default index;
+export default Testimonials;
