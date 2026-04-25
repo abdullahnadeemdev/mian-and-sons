@@ -9,7 +9,7 @@ import Testimonials from "../../components/Home/Testimonials";
 
 const Home = () => {
   return (
-    <div className="flex flex-col gap-15">
+    <div className="flex flex-col gap-15 mx-auto max-w-360">
       <Hero />
       <Expertise />
       <Methodology />

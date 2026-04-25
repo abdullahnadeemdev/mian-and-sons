@@ -1,3 +1,4 @@
+import { Email, Phone, Location } from "./assets/icons";
 // ─── Team Members (About Page) ───────────────────────────────────────────────
 export const TEAM_MEMBERS = [
   {
@@ -280,4 +281,26 @@ export const SERVICE_AREAS = [
   "Johar Town",
   "Model Town",
   "Garden Town",
+];
+
+export const QUICK_LINKS_FOOTER = [
+  { id: 1, label: "Home", to: "/" },
+  { id: 2, label: "Services", to: "/services" },
+  { id: 3, label: "Portfolio", to: "/portfolio" },
+  { id: 4, label: "About Us", to: "/about" },
+  { id: 5, label: "Contact", to: "/contact" },
+];
+
+export const CONTACT_INFO_FOOTER = [
+  { id: 1, icon: Location, text: "Lahore, Pakistan" },
+  { id: 2, icon: Phone, text: "+92 321-8432834" },
+  { id: 3, icon: Email, text: "nadeemaziz1971@gmail.com" },
+];
+
+export const SERVICE_AREAS_FOOTER = [
+  "DHA (All Phases)",
+  "Bahria Town",
+  "Bahria Orchard",
+  "Gulberg",
+  "Johar Town",
 ];
