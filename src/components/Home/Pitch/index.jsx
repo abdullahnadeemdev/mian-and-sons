@@ -22,12 +22,12 @@ const REASONS = [
 
 const Pitch = () => {
   return (
-    <div className="mb-15 bg-primary text-background">
+    <div className="mb-15 bg-primary text-background rounded-2xl">
       <div className="px-6 py-10 flex flex-col gap-6 md:flex-row justify-between">
         <div className="flex-1 mt-4 md:pl-14 ">
-          <p className="text-xl md:text-3xl font-bold text-center md:text-start">
+          <h1 className="text-xl md:text-3xl font-bold text-center md:text-start">
             WHY PARTNER WITH US
-          </p>
+          </h1>
 
           <ul className="mt-5 md:mt-15 flex flex-col gap-4 ">
             {REASONS.map((reason) => (

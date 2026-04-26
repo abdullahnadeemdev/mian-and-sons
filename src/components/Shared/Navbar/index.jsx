@@ -83,9 +83,8 @@ const Navbar = () => {
             <img
               src={logo}
               alt="Mian & Sons Construction Logo"
-              // Applied the exact same conditional white background logic here
-              className={`h-full w-full object-contain scale-[2.2] transition-all duration-300 ${
-                color ? "bg-white p-1 rounded-sm shadow-sm" : ""
+              className={`h-full w-full object-contain scale-150  transition-all duration-300 ${
+                color ? "bg-white rounded-sm shadow-sm" : ""
               }`}
               fetchPriority="high"
               decoding="async"

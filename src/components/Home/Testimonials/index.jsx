@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 
 const Testimonials = () => {
   return (
-    <div className="px-6 max-w-7xl mx-auto text-center overflow-hidden">
+    <div className=" px-6 max-w-[100vw] mx-auto text-center overflow-hidden">
       <h5 className="text-sm text-secondary font-bold tracking-widest uppercase mb-2">
         TESTIMONIALS
       </h5>
@@ -27,6 +27,7 @@ const Testimonials = () => {
         loop={true}
         pagination={{ clickable: true }}
         breakpoints={{
+          320: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
           1024: { slidesPerView: 3 },
         }}

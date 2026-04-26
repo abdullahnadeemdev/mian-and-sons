@@ -3,10 +3,10 @@ import { Star } from "lucide-react";
 const TestimonialCard = ({ name, review, location, star, isActive }) => {
   return (
     <div
-      className={`p-8 rounded-2xl text-left transition-all duration-500 ease-in-out flex flex-col h-full ${
+      className={`p-8 rounded-2xl w-full max-w-100 mx-auto text-left transition-all duration-500 ease-in-out flex flex-col h-full ${
         isActive
           ? "bg-primary text-white shadow-2xl scale-105 z-10"
-          : "bg-white text-slate-800 shadow-md scale-95 opacity-70 cursor-pointer"
+          : "bg-white text-dark shadow-md scale-95 opacity-70 cursor-pointer"
       }`}
     >
       <div className="flex gap-1 mb-6">
@@ -21,7 +21,7 @@ const TestimonialCard = ({ name, review, location, star, isActive }) => {
       </div>
 
       <p
-        className={`text-base md:text-lg italic mb-8 grow leading-relaxed ${
+        className={`text-xs md:text-lg italic mb-8 text-wrap leading-relaxed ${
           isActive ? "text-slate-200" : "text-slate-600"
         }`}
       >
@@ -29,7 +29,7 @@ const TestimonialCard = ({ name, review, location, star, isActive }) => {
       </p>
 
       <div className="flex items-center gap-4">
-        <div className="h-12 w-12 rounded-full overflow-hidden shrink-0 bg-slate-200">
+        <div className="h-12 w-12 rounded-full overflow-hidden  bg-slate-200">
           <img
             src={`https://ui-avatars.com/api/?name=${name}&background=random`}
             alt={name}
