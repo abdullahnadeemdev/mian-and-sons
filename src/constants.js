@@ -1,4 +1,16 @@
 import { Email, Phone, Location } from "./assets/icons";
+import {
+  Building2,
+  HardHat,
+  Wrench,
+  Ruler,
+  PaintBucket,
+  Home,
+  Hammer,
+  ClipboardCheck,
+  ShieldCheck,
+  Sparkles,
+} from "lucide-react";
 // ─── Team Members (About Page) ───────────────────────────────────────────────
 export const TEAM_MEMBERS = [
   {
@@ -320,5 +332,103 @@ export const SERVICES_PREVIEW = [
     title: "Consultation & Management",
     desc: "Technical consultation and transparent project management from blueprint to handover.",
     img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop&auto=format,compress&q=75",
+  },
+];
+
+export const SERVICES = [
+  {
+    icon: Building2,
+    title: "Premium Grey Structure",
+    description:
+      "100% accurate excavation and precise foundation leveling. We use A-Class burnt bricks personally inspected for metallic sound and structural strength, paired with 60-Grade branded steel (Mughal, Ittefaq) ensuring 100% ASTM compliance for earthquake resistance.",
+  },
+  {
+    icon: PaintBucket,
+    title: "Luxury Interior & Exterior Finishing",
+    description:
+      "From imported tiles and designer false ceilings to premium woodwork and modern elevations — we transform grey structures into stunning dream homes with world-class finishing standards.",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Technical Consultation & Project Management",
+    description:
+      "Comprehensive technical consultation from blueprint review to on-site supervision. We ensure every step is cross-checked against the architect's map with transparent project management.",
+  },
+  {
+    icon: Home,
+    title: "Spanish Home Construction",
+    description:
+      "Authentic Spanish-inspired villas with terracotta roofing, arched doorways, stucco walls, and wrought-iron accents. Mediterranean elegance crafted with Lahore's finest materials.",
+  },
+  {
+    icon: HardHat,
+    title: "Residential Home Construction",
+    description:
+      "From 5 Marla to multi-Kanal residences — luxury custom homes designed for modern living. Open-plan layouts, premium flooring, and smart electrical systems built to last generations.",
+  },
+  {
+    icon: Wrench,
+    title: "Maintenance & Repairs",
+    description:
+      "Annual maintenance packages including fresh paint, plumbing inspections, electrical safety checks, and structural assessments. We stay with you even after handover for any technical adjustments.",
+  },
+  {
+    icon: Hammer,
+    title: "Renovation & Remodeling",
+    description:
+      "Breathing new life into existing structures with modern upgrades, structural reinforcements, kitchen and bathroom remodeling, and complete aesthetic transformations.",
+  },
+  {
+    icon: Ruler,
+    title: "Architectural Planning & Design",
+    description:
+      "Comprehensive design services ensuring every project is structurally sound, compliant with local regulations, and visually striking — all verified against precise measurements.",
+  },
+];
+
+// ─── Material Standards Section ──────────────────────────────────────────────
+export const MATERIALS = [
+  {
+    icon: ShieldCheck,
+    title: "A-Class Bricks",
+    desc: "Only first-class burnt bricks, personally inspected for metallic sound and structural strength.",
+  },
+  {
+    icon: Sparkles,
+    title: "60-Grade Branded Steel",
+    desc: "Exclusively Mughal / Ittefaq steel — 100% ASTM compliance for earthquake resistance.",
+  },
+  {
+    icon: Wrench,
+    title: "Premium Plumbing",
+    desc: "High-pressure tested PPRC/UPVC pipes (Turk Plast / Master) for long-term safety.",
+  },
+  {
+    icon: Ruler,
+    title: "Pure Copper Wiring",
+    desc: "99.9% pure copper wiring (Pakistan Cables) ensuring safe, efficient electrical systems.",
+  },
+];
+
+export const PROCESS_STEPS = [
+  {
+    step: "01",
+    title: "Call Us",
+    desc: "Contact us via phone to share your requirements and house plan. We listen to your vision and understand your needs.",
+  },
+  {
+    step: "02",
+    title: "Get a Transparent Quote",
+    desc: "We provide a detailed, transparent quotation based on your specific requirements. No hidden costs.",
+  },
+  {
+    step: "03",
+    title: "In-Person Meeting",
+    desc: "We schedule an in-person meeting to finalize details, review architectural drawings, and align on the timeline.",
+  },
+  {
+    step: "04",
+    title: "Build & Handover",
+    desc: "We begin construction with 100% structural accuracy and hand over your dream home with a structural warranty.",
   },
 ];

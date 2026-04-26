@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { PROJECT_TYPES, CONTACT_INFO } from "../constants";
+import emailjs from "@emailjs/browser";
 
 // ─── Animation Variants ──────────────────────────────────────────────────────
 const fadeUp = {
@@ -33,11 +34,31 @@ const ContactForm = () => {
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: wire to backend / email service
-    alert("Thank you! We'll be in touch shortly.");
+    const emailMsg = {
+      name: form.name,
+      email: form.email,
+      phone: form.phone,
+      projectType: form.projectType,
+      details: form.details,
+    };
+
+    emailjs
+      .send("service_7ok4ff6", "template_ozlfqhw", emailMsg, {
+        publicKey: "BSYXdsD9__MxCDP4C",
+      })
+      .then(
+        (response) => {
+          alert("Email sent! We'll be in touch shortly.");
+          console.log("SUCESS", response.status, response.text);
+        },
+        (error) => {
+          alert("Email failed.");
+          console.log("Error", response.status, response.text);
+        },
+      );
+
     setForm({ name: "", email: "", phone: "", projectType: "", details: "" });
   };
 
@@ -45,7 +66,10 @@ const ContactForm = () => {
     <form onSubmit={handleSubmit} className="flex flex-col gap-7">
       {/* Name */}
       <div>
-        <label htmlFor="name" className="text-xs font-semibold text-dark/50 uppercase tracking-wider">
+        <label
+          htmlFor="name"
+          className="text-xs font-semibold text-dark/50 uppercase tracking-wider"
+        >
           Full Name
         </label>
         <input
@@ -62,7 +86,10 @@ const ContactForm = () => {
 
       {/* Email */}
       <div>
-        <label htmlFor="email" className="text-xs font-semibold text-dark/50 uppercase tracking-wider">
+        <label
+          htmlFor="email"
+          className="text-xs font-semibold text-dark/50 uppercase tracking-wider"
+        >
           Email Address
         </label>
         <input
@@ -79,7 +106,10 @@ const ContactForm = () => {
 
       {/* Phone */}
       <div>
-        <label htmlFor="phone" className="text-xs font-semibold text-dark/50 uppercase tracking-wider">
+        <label
+          htmlFor="phone"
+          className="text-xs font-semibold text-dark/50 uppercase tracking-wider"
+        >
           Phone Number
         </label>
         <input
@@ -95,7 +125,10 @@ const ContactForm = () => {
 
       {/* Project Type */}
       <div>
-        <label htmlFor="projectType" className="text-xs font-semibold text-dark/50 uppercase tracking-wider">
+        <label
+          htmlFor="projectType"
+          className="text-xs font-semibold text-dark/50 uppercase tracking-wider"
+        >
           Project Type
         </label>
         <select
@@ -104,7 +137,7 @@ const ContactForm = () => {
           required
           value={form.projectType}
           onChange={handleChange}
-          className={`${inputBase} cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%236b7280%22%20d%3D%22M2%204l4%204%204-4%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[right_0.5rem_center]`}
+          className={`${inputBase} cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Cpath%20fill%3D%22%236b7280%22%20d%3D%22M2%204l4%204%204-4%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-position-[right_0.5rem_center]`}
         >
           <option value="" disabled>
             Select project type
@@ -119,7 +152,10 @@ const ContactForm = () => {
 
       {/* Details */}
       <div>
-        <label htmlFor="details" className="text-xs font-semibold text-dark/50 uppercase tracking-wider">
+        <label
+          htmlFor="details"
+          className="text-xs font-semibold text-dark/50 uppercase tracking-wider"
+        >
           Project Details
         </label>
         <textarea
@@ -138,7 +174,7 @@ const ContactForm = () => {
         type="submit"
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.97 }}
-        className="w-full mt-2 py-4 bg-accent hover:bg-orange-600 text-white font-bold text-base md:text-lg rounded-2xl shadow-xl shadow-accent/20 transition-colors duration-300 cursor-pointer flex items-center justify-center gap-2"
+        className="w-full mt-2 py-4 bg-secondary hover:bg-accent text-white font-bold text-base md:text-lg rounded-2xl shadow-xl shadow-accent/20 transition-colors duration-300 cursor-pointer flex items-center justify-center gap-2"
       >
         <Send className="w-5 h-5" />
         Request Free Consultation
@@ -190,7 +226,7 @@ const ContactSidebar = () => (
             {item.href ? (
               <a
                 href={item.href}
-                className="text-dark font-medium hover:text-accent transition-colors text-sm md:text-base"
+                className="text-dark font-medium hover:text-secondary transition-colors text-sm md:text-base"
               >
                 {item.value}
               </a>
@@ -242,7 +278,7 @@ const Contact = () => (
       >
         <motion.span
           variants={fadeUp}
-          className="text-accent font-semibold tracking-widest text-sm uppercase"
+          className="text-secondary font-semibold tracking-widest text-sm uppercase"
         >
           Contact Us
         </motion.span>
@@ -250,8 +286,7 @@ const Contact = () => (
           variants={fadeUp}
           className="text-3xl md:text-5xl xl:text-6xl font-bold text-dark mt-3 leading-tight"
         >
-          Let's Discuss Your{" "}
-          <span className="text-primary">Next Project.</span>
+          Let's Discuss Your <span className="text-primary">Next Project.</span>
         </motion.h1>
         <motion.p
           variants={fadeUp}

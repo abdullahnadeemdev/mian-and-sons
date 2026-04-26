@@ -31,7 +31,7 @@ const stagger = {
 
 // ─── Mini Hero ───────────────────────────────────────────────────────────────
 const MiniHero = () => (
-  <div className="relative h-[40vh] min-h-[320px] flex items-center justify-center overflow-hidden">
+  <div className="relative h-[40vh] min-h-80 flex items-center justify-center overflow-hidden">
     <div className="absolute inset-0 bg-dark/70 z-10" />
     <img
       src={homeOne}
@@ -46,12 +46,12 @@ const MiniHero = () => (
       animate="visible"
       variants={fadeUp}
     >
-      <span className="inline-block bg-accent/90 text-white text-xs sm:text-sm font-medium px-5 py-1.5 rounded-full tracking-wider mb-6">
+      <span className="inline-block bg-secondary text-white text-xs sm:text-sm font-medium px-5 py-1.5 rounded-full tracking-wider mb-6">
         ABOUT US
       </span>
       <h1 className="text-3xl md:text-5xl xl:text-6xl font-bold text-white max-w-4xl leading-tight">
         Building Foundations,{" "}
-        <span className="text-accent">Crafting Legacies.</span>
+        <span className="text-secondary">Crafting Legacies.</span>
       </h1>
     </motion.div>
   </div>
@@ -71,7 +71,7 @@ const OurStory = () => (
       >
         <motion.span
           variants={fadeUp}
-          className="text-accent font-semibold tracking-widest text-sm uppercase"
+          className="text-secondary font-semibold tracking-widest text-sm uppercase"
         >
           Our Story
         </motion.span>
@@ -84,22 +84,32 @@ const OurStory = () => (
           <span className="text-primary">Family Integrity</span>
         </motion.h2>
 
-        <motion.div variants={fadeUp} className="space-y-5 text-dark/70 leading-relaxed text-sm md:text-base">
+        <motion.div
+          variants={fadeUp}
+          className="space-y-5 text-dark/70 leading-relaxed text-sm md:text-base"
+        >
           <p>
-            Our company is built on the foundation of <strong>"Family Integrity."</strong> Our
-            skills were passed down from our father, Haji Muhammad Aziz (Late), who taught us that
-            honesty in material and precision in work are the only ways to build a name.
+            Our company is built on the foundation of{" "}
+            <strong>"Family Integrity."</strong> Our skills were passed down
+            from our father, Haji Muhammad Aziz (Late), who taught us that
+            honesty in material and precision in work are the only ways to build
+            a name.
           </p>
           <p>
-            Today, with <span className="font-mono font-semibold text-dark">26+</span> years of
-            on-ground expertise and <span className="font-mono font-semibold text-dark">200+</span>{" "}
-            luxury projects completed, we continue this legacy by blending traditional values with
-            modern engineering. We don't just build houses — we construct legacies.
+            Today, with{" "}
+            <span className="font-mono font-semibold text-dark">26+</span> years
+            of on-ground expertise and{" "}
+            <span className="font-mono font-semibold text-dark">200+</span>{" "}
+            luxury projects completed, we continue this legacy by blending
+            traditional values with modern engineering. We don't just build
+            houses — we construct legacies.
           </p>
           <p>
-            Our unique guarantee is <strong>100% adherence to architectural drawings</strong>,
-            utilizing a permanent team that has been with us for over 25 years to ensure every
-            brick is laid with mastered skill and every structure stands the test of time.
+            Our unique guarantee is{" "}
+            <strong>100% adherence to architectural drawings</strong>, utilizing
+            a permanent team that has been with us for over 25 years to ensure
+            every brick is laid with mastered skill and every structure stands
+            the test of time.
           </p>
         </motion.div>
 
@@ -131,7 +141,7 @@ const OurStory = () => (
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={stagger}
-        className="relative grid grid-cols-2 gap-4 h-[420px] md:h-[500px]"
+        className="relative grid grid-cols-2 gap-4 h-105 md:h-125"
       >
         {/* Large image */}
         <motion.div
@@ -194,7 +204,7 @@ const TheTeam = () => (
       >
         <motion.span
           variants={fadeUp}
-          className="text-accent font-semibold tracking-widest text-sm uppercase"
+          className="text-secondary font-semibold tracking-widest text-sm uppercase"
         >
           Our Team
         </motion.span>
@@ -202,16 +212,18 @@ const TheTeam = () => (
           variants={fadeUp}
           className="text-3xl md:text-4xl font-bold text-dark mt-3 leading-snug"
         >
-          A <span className="text-primary">Permanent</span> Team, Not Daily Wagers
+          A <span className="text-primary">Permanent</span> Team, Not Daily
+          Wagers
         </motion.h2>
         <motion.p
           variants={fadeUp}
           className="mt-6 text-dark/70 leading-relaxed text-base md:text-lg"
         >
-          Unlike companies that hire daily wagers, we boast a permanent staff that has been
-          working with us for over two decades. They understand our standards of "Leveling"
-          and "Strength" better than anyone else in the market. This consistency is what
-          delivers our signature quality on every project.
+          Unlike companies that hire daily wagers, we boast a permanent staff
+          that has been working with us for over two decades. They understand
+          our standards of "Leveling" and "Strength" better than anyone else in
+          the market. This consistency is what delivers our signature quality on
+          every project.
         </motion.p>
       </motion.div>
     </div>
@@ -230,7 +242,7 @@ const Guarantees = () => (
     >
       <motion.span
         variants={fadeUp}
-        className="text-accent font-semibold tracking-widest text-sm uppercase"
+        className="text-secondary font-semibold tracking-widest text-sm uppercase"
       >
         Our Guarantee
       </motion.span>
@@ -300,7 +312,7 @@ const CoreValues = () => (
       >
         <motion.span
           variants={fadeUp}
-          className="text-accent font-semibold tracking-widest text-sm uppercase"
+          className="text-secondary font-semibold tracking-widest text-sm uppercase"
         >
           Core Values
         </motion.span>
@@ -372,7 +384,7 @@ const LeadershipTeam = () => (
       >
         <motion.span
           variants={fadeUp}
-          className="text-accent font-semibold tracking-widest text-sm uppercase"
+          className="text-secondary font-semibold tracking-widest text-sm uppercase"
         >
           Leadership
         </motion.span>

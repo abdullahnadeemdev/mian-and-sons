@@ -20,7 +20,7 @@ const stagger = {
 
 // ─── Mini Hero ───────────────────────────────────────────────────────────────
 const MiniHero = () => (
-  <div className="relative h-[40vh] min-h-[320px] flex items-center justify-center overflow-hidden">
+  <div className="relative h-[40vh] min-h-80 flex items-center justify-center overflow-hidden">
     <div className="absolute inset-0 bg-dark/70 z-10" />
     <img
       src={homeOne}
@@ -35,15 +35,15 @@ const MiniHero = () => (
       animate="visible"
       variants={fadeUp}
     >
-      <span className="inline-block bg-accent/90 text-white text-xs sm:text-sm font-medium px-5 py-1.5 rounded-full tracking-wider mb-6">
+      <span className="inline-block bg-secondary text-white text-xs sm:text-sm font-medium px-5 py-1.5 rounded-full tracking-wider mb-6">
         OUR PORTFOLIO
       </span>
       <h1 className="text-3xl md:text-5xl xl:text-6xl font-bold text-white max-w-4xl leading-tight">
-        200+ Luxury Homes,{" "}
-        <span className="text-accent">One Standard.</span>
+        200+ Luxury Homes, <span className="text-secondary">One Standard.</span>
       </h1>
       <p className="text-white/70 mt-4 max-w-2xl mx-auto text-sm md:text-base">
-        Serving DHA, Bahria Town, Bahria Orchard, Gulberg, and Johar Town — visit our active sites to witness our quality firsthand.
+        Serving DHA, Bahria Town, Bahria Orchard, Gulberg, and Johar Town —
+        visit our active sites to witness our quality firsthand.
       </p>
     </motion.div>
   </div>
@@ -169,11 +169,11 @@ const Portfolio = () => {
             Impressed? Let's Build Yours Next.
           </h2>
           <p className="text-white/70 max-w-xl mx-auto mb-8">
-            We invite you to visit our active construction sites and see our quality control firsthand. 
-            Your dream home is one phone call away.
+            We invite you to visit our active construction sites and see our
+            quality control firsthand. Your dream home is one phone call away.
           </p>
           <Link to="/contact">
-            <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-xl shadow-orange-500/20 hover:-translate-y-1 flex items-center gap-2 mx-auto cursor-pointer">
+            <button className="bg-secondary hover:bg-accent text-white font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-xl shadow-orange-500/20 hover:-translate-y-1 flex items-center gap-2 mx-auto cursor-pointer">
               <span>Start Your Project</span>
               <ArrowUpRight className="w-5 h-5" />
             </button>
