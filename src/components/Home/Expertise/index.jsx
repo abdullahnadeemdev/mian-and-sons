@@ -1,6 +1,6 @@
 import React from "react";
 import { homeOne } from "../../../assets/images";
-import ImgContainer from "../../Shared/imgContainer";
+import ImgContainer from "../../Shared/ImgContainer";
 import { SERVICES_PREVIEW } from "../../../constants";
 
 const Expertise = () => {
