@@ -18,6 +18,10 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.12 } },
 };
 
+const serviceKey = import.meta.env.VITE_SERVICE_KEY;
+const templateKey = import.meta.env.VITE_TEMPLATE_KEY;
+const publicKey = import.meta.env.VITE_PUBLIC_KEY; // Move your hardcoded key here!
+
 // ─── Reusable Input ──────────────────────────────────────────────────────────
 const inputBase =
   "w-full bg-transparent border-b border-dark/20 py-3 px-1 text-dark placeholder:text-dark/40 transition-all duration-300 outline-none focus:border-accent focus:ring-0 text-sm md:text-base font-sans";
@@ -45,8 +49,8 @@ const ContactForm = () => {
     };
 
     emailjs
-      .send("service_7ok4ff6", "template_ozlfqhw", emailMsg, {
-        publicKey: "BSYXdsD9__MxCDP4C",
+      .send(serviceKey, templateKey, emailMsg, {
+        publicKey,
       })
       .then(
         (response) => {

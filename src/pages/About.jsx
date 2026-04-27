@@ -372,77 +372,77 @@ const CoreValues = () => (
 );
 
 // ─── Leadership Team ─────────────────────────────────────────────────────────
-const LeadershipTeam = () => (
-  <section className="py-24 px-6 md:px-12 lg:px-20 bg-slate-900">
-    <div className="max-w-7xl mx-auto">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={stagger}
-        className="text-center mb-16"
-      >
-        <motion.span
-          variants={fadeUp}
-          className="text-secondary font-semibold tracking-widest text-sm uppercase"
-        >
-          Leadership
-        </motion.span>
-        <motion.h2
-          variants={fadeUp}
-          className="text-3xl md:text-4xl font-bold text-white mt-3"
-        >
-          The People Behind the Projects
-        </motion.h2>
-      </motion.div>
+// const LeadershipTeam = () => (
+//   <section className="py-24 px-6 md:px-12 lg:px-20 bg-slate-900">
+//     <div className="max-w-7xl mx-auto">
+//       <motion.div
+//         initial="hidden"
+//         whileInView="visible"
+//         viewport={{ once: true, amount: 0.3 }}
+//         variants={stagger}
+//         className="text-center mb-16"
+//       >
+//         <motion.span
+//           variants={fadeUp}
+//           className="text-secondary font-semibold tracking-widest text-sm uppercase"
+//         >
+//           Leadership
+//         </motion.span>
+//         <motion.h2
+//           variants={fadeUp}
+//           className="text-3xl md:text-4xl font-bold text-white mt-3"
+//         >
+//           The People Behind the Projects
+//         </motion.h2>
+//       </motion.div>
 
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={stagger}
-        className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
-      >
-        {TEAM_MEMBERS.map((member, i) => (
-          <motion.div
-            key={member.id}
-            variants={fadeUp}
-            custom={i}
-            className="group relative rounded-2xl overflow-hidden shadow-2xl shadow-black/10 bg-white/5 backdrop-blur-md border border-white/10"
-          >
-            {/* Portrait */}
-            <div className="h-80 overflow-hidden">
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
+//       <motion.div
+//         initial="hidden"
+//         whileInView="visible"
+//         viewport={{ once: true, amount: 0.2 }}
+//         variants={stagger}
+//         className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+//       >
+//         {TEAM_MEMBERS.map((member, i) => (
+//           <motion.div
+//             key={member.id}
+//             variants={fadeUp}
+//             custom={i}
+//             className="group relative rounded-2xl overflow-hidden shadow-2xl shadow-black/10 bg-white/5 backdrop-blur-md border border-white/10"
+//           >
+//             {/* Portrait */}
+//             <div className="h-80 overflow-hidden">
+//               <img
+//                 src={member.image}
+//                 alt={member.name}
+//                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+//                 loading="lazy"
+//                 decoding="async"
+//               />
+//             </div>
 
-            {/* Info */}
-            <div className="p-6 flex items-center justify-between">
-              <div>
-                <h3 className="text-lg font-bold text-white">{member.name}</h3>
-                <p className="text-sm text-white/60 mt-0.5">{member.title}</p>
-              </div>
-              <a
-                href={member.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${member.name} LinkedIn`}
-                className="p-2.5 rounded-xl bg-white/10 hover:bg-accent text-white/70 hover:text-white transition-all duration-300"
-              >
-                <LinkedinIcon className="w-5 h-5" />
-              </a>
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
-    </div>
-  </section>
-);
+//             {/* Info */}
+//             <div className="p-6 flex items-center justify-between">
+//               <div>
+//                 <h3 className="text-lg font-bold text-white">{member.name}</h3>
+//                 <p className="text-sm text-white/60 mt-0.5">{member.title}</p>
+//               </div>
+//               <a
+//                 href={member.linkedin}
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 aria-label={`${member.name} LinkedIn`}
+//                 className="p-2.5 rounded-xl bg-white/10 hover:bg-accent text-white/70 hover:text-white transition-all duration-300"
+//               >
+//                 <LinkedinIcon className="w-5 h-5" />
+//               </a>
+//             </div>
+//           </motion.div>
+//         ))}
+//       </motion.div>
+//     </div>
+//   </section>
+// );
 
 // ─── About Page ──────────────────────────────────────────────────────────────
 const About = () => (
