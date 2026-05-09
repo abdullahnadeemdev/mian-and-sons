@@ -11,6 +11,14 @@ import {
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
+
+export const NAV_LINKS = [
+  { label: "Home", to: "/" },
+  { label: "About", to: "/about" },
+  { label: "Projects", to: "/portfolio" },
+  { label: "Services", to: "/services" },
+];
+
 // ─── Team Members (About Page) ───────────────────────────────────────────────
 export const TEAM_MEMBERS = [
   {

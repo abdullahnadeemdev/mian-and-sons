@@ -3,7 +3,7 @@ import Button from "../../Shared/Button";
 
 const CTA = () => {
   return (
-    <div className="flex items-center justify-center ">
+    <div className="flex items-center justify-center mx-6">
       <div className=" p-8 bg-primary w-[90vw] md:w-[80vw] text-center flex rounded-4xl flex-col gap-10 items-center justify-center ">
         <h1 className="text-white font-semibold text-base sm:text-lg lg:text-5xl">
           Ready To Build Your Legacy?

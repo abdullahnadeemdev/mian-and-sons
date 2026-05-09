@@ -6,7 +6,7 @@ const ImgContainer = ({ title, desc, img }) => {
       <div className="bg-black/40 w-full h-full absolute rounded-2xl"></div>
       <div className="absolute bottom-0 p-2  text-background text-start">
         <p className="font-semibold mb-1">{title}</p>
-        <p className="">{desc}</p>
+        <p className="text-sm lg:text-base">{desc}</p>
       </div>
       <img
         src={img}
