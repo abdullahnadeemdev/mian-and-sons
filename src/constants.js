@@ -432,3 +432,23 @@ export const PROCESS_STEPS = [
     desc: "We begin construction with 100% structural accuracy and hand over your dream home with a structural warranty.",
   },
 ];
+
+// ─── HOME PITCH Section ──────────────────────────────────────────────
+export const REASONS = [
+  {
+    title: "100% Structural Accuracy",
+    desc: "Every brick is laid with precision — we guarantee 100% adherence to your architect's drawings and maps.",
+  },
+  {
+    title: "25+ Year Permanent Team",
+    desc: "Our staff has been with us for over 25 years. They understand our standards of leveling, strength, and finishing.",
+  },
+  {
+    title: "Premium Materials Only",
+    desc: "A-Class bricks, 60-Grade Mughal/Ittefaq steel, Turk Plast pipes, and 99.9% pure Pakistan Cables copper wiring.",
+  },
+  {
+    title: "Structural Warranty & Support",
+    desc: "We offer a structural warranty and remain available even after handover for any technical adjustments.",
+  },
+];
