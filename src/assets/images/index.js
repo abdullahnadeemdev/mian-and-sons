@@ -1,2 +1,4 @@
-export { default as logo } from "./logo.png";
-export { default as homeOne } from "./homeOne.jpg";
+import logo from "./logo.png";
+import homeOne from "./homeOne.jpg";
+
+export { logo, homeOne };

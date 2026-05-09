@@ -3,13 +3,7 @@ import { Menu, Close } from "../../../assets/icons";
 import Button from "../Button";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-
-const NAV_LINKS = [
-  { label: "Home", to: "/" },
-  { label: "Services", to: "/services" },
-  { label: "Projects", to: "/portfolio" },
-  { label: "About", to: "/about" },
-];
+import { NAV_LINKS } from "../../../constants";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -33,7 +27,7 @@ const Navbar = () => {
     <div className="mx-auto max-w-360 sticky top-0 z-100 ">
       {/* --- DESKTOP NAVBAR --- */}
       <div
-        className={` hidden sm:flex items-center rounded-2xl justify-between px-6 py-4 transition-colors duration-300 ${
+        className={` hidden sm:flex items-center  justify-between px-6 py-4 transition-colors duration-300 ${
           color
             ? "bg-dark text-background shadow-md"
             : "bg-background text-black"

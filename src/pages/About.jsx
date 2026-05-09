@@ -456,7 +456,7 @@ const About = () => (
     <TheTeam />
     <Guarantees />
     <CoreValues />
-    <LeadershipTeam />
+    {/* <LeadershipTeam /> */}
   </motion.div>
 );
 

@@ -4,7 +4,7 @@ import Methods from "../../Shared/Methods";
 
 const Methodology = () => {
   return (
-    <div className="mx-auto mb-15">
+    <div className="lg:mx-auto mx-6 mb-15">
       <h1 className="text-2xl md:text-4xl xl:text-6xl font-bold text-primary text-center">
         Your Journey to a Dream Home
       </h1>{" "}
