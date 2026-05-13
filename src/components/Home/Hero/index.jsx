@@ -1,6 +1,6 @@
 import { homeOne } from "../../../assets/images";
 import { LeftArrow } from "../../../assets/icons";
-import Button from "../../Shared/Button";
+import Button from "../../shared/Button";
 import Stats from "./Stats";
 import { Link } from "react-router";
 

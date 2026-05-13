@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router";
-import Layout from "./components/Shared/Layout";
-import ScrollToTop from "./components/Shared/ScrollToTop";
+import Layout from "./components/shared/Layout";
+import ScrollToTop from "./components/shared/ScrollToTop";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";

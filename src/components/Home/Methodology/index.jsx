@@ -1,6 +1,6 @@
 import React from "react";
 import { Construction, Design, Email, Handshake } from "../../../assets/icons";
-import Methods from "../../Shared/Methods";
+import Methods from "../../shared/Methods";
 
 const Methodology = () => {
   return (
