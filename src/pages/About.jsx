@@ -446,18 +446,27 @@ const CoreValues = () => (
 
 // ─── About Page ──────────────────────────────────────────────────────────────
 const About = () => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
-  >
-    <MiniHero />
-    <OurStory />
-    <TheTeam />
-    <Guarantees />
-    <CoreValues />
-    {/* <LeadershipTeam /> */}
-  </motion.div>
+  <>
+    <Helmet>
+      <title>About Page</title>
+      <meta
+        name="description"
+        content="Learn about Mian & Sons Construction, a Lahore-based construction company with 26+ years of experience building luxury homes, modern villas, and residential projects."
+      />
+    </Helmet>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <MiniHero />
+      <OurStory />
+      <TheTeam />
+      <Guarantees />
+      <CoreValues />
+      {/* <LeadershipTeam /> */}
+    </motion.div>
+  </>
 );
 
 export default About;

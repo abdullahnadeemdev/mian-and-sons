@@ -4,6 +4,7 @@ import { MapPin, ArrowUpRight } from "lucide-react";
 import { PORTFOLIO_PROJECTS, PORTFOLIO_CATEGORIES } from "../constants";
 import { homeOne } from "../assets/images";
 import { Link } from "react-router";
+import { Helmet } from "react-helmet-async";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -132,55 +133,66 @@ const Portfolio = () => {
       : PORTFOLIO_PROJECTS.filter((p) => p.category === activeCategory);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <MiniHero />
+    <>
+      <Helmet>
+        <title>Portfolio Page</title>
 
-      <section className="py-20 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
-        <FilterTabs active={activeCategory} onChange={setActiveCategory} />
+        <meta
+          name="description"
+          content="Explore luxury homes, Spanish villas, grey structure projects, and interior design work completed by Mian & Sons Construction in Lahore."
+        />
+      </Helmet>
 
-        <AnimatePresence mode="wait">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <MiniHero />
+
+        <section className="py-20 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
+          <FilterTabs active={activeCategory} onChange={setActiveCategory} />
+
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeCategory}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              {filtered.map((project, i) => (
+                <ProjectCard key={project.id} project={project} index={i} />
+              ))}
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Stats Banner */}
           <motion.div
-            key={activeCategory}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeUp}
+            className="mt-20 bg-primary rounded-3xl p-10 md:p-14 text-white text-center shadow-2xl shadow-primary/20"
           >
-            {filtered.map((project, i) => (
-              <ProjectCard key={project.id} project={project} index={i} />
-            ))}
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Impressed? Let's Build Yours Next.
+            </h2>
+            <p className="text-white/70 max-w-xl mx-auto mb-8">
+              We invite you to visit our active construction sites and see our
+              quality control firsthand. Your dream home is one phone call away.
+            </p>
+            <Link to="/contact">
+              <button className="bg-secondary hover:bg-accent text-white font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-xl shadow-orange-500/20 hover:-translate-y-1 flex items-center gap-2 mx-auto cursor-pointer">
+                <span>Start Your Project</span>
+                <ArrowUpRight className="w-5 h-5" />
+              </button>
+            </Link>
           </motion.div>
-        </AnimatePresence>
-
-        {/* Stats Banner */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeUp}
-          className="mt-20 bg-primary rounded-3xl p-10 md:p-14 text-white text-center shadow-2xl shadow-primary/20"
-        >
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Impressed? Let's Build Yours Next.
-          </h2>
-          <p className="text-white/70 max-w-xl mx-auto mb-8">
-            We invite you to visit our active construction sites and see our
-            quality control firsthand. Your dream home is one phone call away.
-          </p>
-          <Link to="/contact">
-            <button className="bg-secondary hover:bg-accent text-white font-bold py-4 px-10 rounded-full transition-all duration-300 shadow-xl shadow-orange-500/20 hover:-translate-y-1 flex items-center gap-2 mx-auto cursor-pointer">
-              <span>Start Your Project</span>
-              <ArrowUpRight className="w-5 h-5" />
-            </button>
-          </Link>
-        </motion.div>
-      </section>
-    </motion.div>
+        </section>
+      </motion.div>
+    </>
   );
 };
 

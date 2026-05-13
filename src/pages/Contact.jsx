@@ -267,65 +267,75 @@ const ContactSidebar = () => (
 
 // ─── Contact Page ────────────────────────────────────────────────────────────
 const Contact = () => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
-  >
-    {/* Header */}
-    <section className="pt-28 pb-8 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={stagger}
-        className="max-w-2xl"
-      >
-        <motion.span
-          variants={fadeUp}
-          className="text-secondary font-semibold tracking-widest text-sm uppercase"
-        >
-          Contact Us
-        </motion.span>
-        <motion.h1
-          variants={fadeUp}
-          className="text-3xl md:text-5xl xl:text-6xl font-bold text-dark mt-3 leading-tight"
-        >
-          Let's Discuss Your <span className="text-primary">Next Project.</span>
-        </motion.h1>
-        <motion.p
-          variants={fadeUp}
-          className="text-dark/60 mt-4 text-sm md:text-base max-w-lg leading-relaxed"
-        >
-          Fill out the form below and our team will reach out within 24 hours to
-          schedule your free consultation.
-        </motion.p>
-      </motion.div>
-    </section>
-
-    {/* Two-Column Layout */}
-    <section className="pb-24 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
-        variants={stagger}
-        className="grid lg:grid-cols-5 gap-16"
-      >
-        {/* Form — 3 cols */}
+  <>
+    <Helmet>
+      <title>Contact Page</title>
+      <meta
+        name="description"
+        content="Contact Mian & Sons Construction for luxury home construction, renovation, and interior design services in Lahore. Get consultation and project estimates."
+      />{" "}
+    </Helmet>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      {/* Header */}
+      <section className="pt-28 pb-8 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
         <motion.div
-          variants={fadeUp}
-          className="lg:col-span-3 bg-white rounded-2xl shadow-2xl shadow-black/10 p-8 md:p-10"
+          initial="hidden"
+          animate="visible"
+          variants={stagger}
+          className="max-w-2xl"
         >
-          <ContactForm />
+          <motion.span
+            variants={fadeUp}
+            className="text-secondary font-semibold tracking-widest text-sm uppercase"
+          >
+            Contact Us
+          </motion.span>
+          <motion.h1
+            variants={fadeUp}
+            className="text-3xl md:text-5xl xl:text-6xl font-bold text-dark mt-3 leading-tight"
+          >
+            Let's Discuss Your{" "}
+            <span className="text-primary">Next Project.</span>
+          </motion.h1>
+          <motion.p
+            variants={fadeUp}
+            className="text-dark/60 mt-4 text-sm md:text-base max-w-lg leading-relaxed"
+          >
+            Fill out the form below and our team will reach out within 24 hours
+            to schedule your free consultation.
+          </motion.p>
         </motion.div>
+      </section>
 
-        {/* Sidebar — 2 cols */}
-        <motion.div variants={fadeUp} custom={1} className="lg:col-span-2">
-          <ContactSidebar />
+      {/* Two-Column Layout */}
+      <section className="pb-24 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={stagger}
+          className="grid lg:grid-cols-5 gap-16"
+        >
+          {/* Form — 3 cols */}
+          <motion.div
+            variants={fadeUp}
+            className="lg:col-span-3 bg-white rounded-2xl shadow-2xl shadow-black/10 p-8 md:p-10"
+          >
+            <ContactForm />
+          </motion.div>
+
+          {/* Sidebar — 2 cols */}
+          <motion.div variants={fadeUp} custom={1} className="lg:col-span-2">
+            <ContactSidebar />
+          </motion.div>
         </motion.div>
-      </motion.div>
-    </section>
-  </motion.div>
+      </section>
+    </motion.div>
+  </>
 );
 
 export default Contact;

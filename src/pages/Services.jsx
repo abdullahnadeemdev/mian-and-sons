@@ -210,77 +210,86 @@ const ServicesCTA = () => (
 );
 
 const Services = () => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
-    className="bg-slate-50 py-24 min-h-screen"
-  >
-    <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 mt-12">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={stagger}
-        className="text-center mb-16 max-w-3xl mx-auto"
-      >
-        <motion.span
-          variants={fadeUp}
-          className="text-secondary font-semibold tracking-widest text-sm uppercase"
+  <>
+    <Helmet>
+      <title>Services Page</title>
+      <meta
+        name="description"
+        content="Professional construction services in Lahore including grey structure, turnkey homes, Spanish villa construction, interior design, renovation, and architectural planning."
+      />
+    </Helmet>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-slate-50 py-24 min-h-screen"
+    >
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 mt-12">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={stagger}
+          className="text-center mb-16 max-w-3xl mx-auto"
         >
-          Our Services
-        </motion.span>
-        <motion.h1
-          variants={fadeUp}
-          className="text-3xl md:text-5xl font-bold text-slate-900 mt-3"
-        >
-          Comprehensive{" "}
-          <span className="text-primary">Construction Services</span>
-        </motion.h1>
-        <motion.p
-          variants={fadeUp}
-          className="mt-6 text-slate-600 leading-relaxed text-sm md:text-base"
-        >
-          With 26+ years of experience and 200+ luxury homes completed, we
-          provide end-to-end construction solutions — from premium grey
-          structures to luxury finishing, maintenance, and everything in
-          between. Quality work is our motto.
-        </motion.p>
-      </motion.div>
-
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={stagger}
-        className="grid md:grid-cols-2 gap-8"
-      >
-        {SERVICES.map((service, i) => (
-          <motion.div
-            key={service.title}
+          <motion.span
             variants={fadeUp}
-            custom={i}
-            className="group bg-white p-8 md:p-10 rounded-2xl shadow-2xl shadow-black/10 hover:-translate-y-2 transition-transform duration-300"
+            className="text-secondary font-semibold tracking-widest text-sm uppercase"
           >
-            <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
-              <service.icon className="w-7 h-7" />
-            </div>
-            <h3 className="text-2xl font-bold text-dark mb-4">
-              {service.title}
-            </h3>
-            <p className="text-slate-600 leading-relaxed">
-              {service.description}
-            </p>
-          </motion.div>
-        ))}
-      </motion.div>
-    </div>
+            Our Services
+          </motion.span>
+          <motion.h1
+            variants={fadeUp}
+            className="text-3xl md:text-5xl font-bold text-slate-900 mt-3"
+          >
+            Comprehensive{" "}
+            <span className="text-primary">Construction Services</span>
+          </motion.h1>
+          <motion.p
+            variants={fadeUp}
+            className="mt-6 text-slate-600 leading-relaxed text-sm md:text-base"
+          >
+            With 26+ years of experience and 200+ luxury homes completed, we
+            provide end-to-end construction solutions — from premium grey
+            structures to luxury finishing, maintenance, and everything in
+            between. Quality work is our motto.
+          </motion.p>
+        </motion.div>
 
-    <MaterialStandards />
-    <OurProcess />
-    <ServiceAreas />
-    <ServicesCTA />
-  </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={stagger}
+          className="grid md:grid-cols-2 gap-8"
+        >
+          {SERVICES.map((service, i) => (
+            <motion.div
+              key={service.title}
+              variants={fadeUp}
+              custom={i}
+              className="group bg-white p-8 md:p-10 rounded-2xl shadow-2xl shadow-black/10 hover:-translate-y-2 transition-transform duration-300"
+            >
+              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
+                <service.icon className="w-7 h-7" />
+              </div>
+              <h3 className="text-2xl font-bold text-dark mb-4">
+                {service.title}
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                {service.description}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+      <MaterialStandards />
+      <OurProcess />
+      <ServiceAreas />
+      <ServicesCTA />
+    </motion.div>
+  </>
 );
 
 export default Services;
