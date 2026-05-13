@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { PROJECT_TYPES, CONTACT_INFO } from "../constants";
 import emailjs from "@emailjs/browser";
+import { Helmet } from "react-helmet-async";
 
 // ─── Animation Variants ──────────────────────────────────────────────────────
 const fadeUp = {

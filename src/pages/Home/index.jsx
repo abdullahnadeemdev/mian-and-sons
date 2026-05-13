@@ -6,6 +6,7 @@ import Portfolio from "../../components/Home/Portfolio";
 import Pitch from "../../components/Home/Pitch";
 import CTA from "../../components/Home/CTA";
 import Testimonials from "../../components/Home/Testimonials";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   return (
