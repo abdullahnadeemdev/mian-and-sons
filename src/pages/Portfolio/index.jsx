@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, ArrowUpRight } from "lucide-react";
-import { PORTFOLIO_PROJECTS, PORTFOLIO_CATEGORIES } from "../constants";
-import { homeOne } from "../assets/images";
+import { PORTFOLIO_PROJECTS, PORTFOLIO_CATEGORIES } from "../../constants";
+import { homeOne } from "../../assets/images";
 import { Link } from "react-router";
 import { Helmet } from "react-helmet-async";
 

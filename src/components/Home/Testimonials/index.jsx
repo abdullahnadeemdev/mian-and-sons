@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 
 const Testimonials = () => {
   return (
-    <div className=" px-6 max-w-[100vw] xl:max-w-360 mx-auto text-center overflow-hidden">
+    <div className=" px-6 max-w-[100vw] xl:max-w-308.75 mx-auto text-center overflow-hidden">
       <h5 className="text-sm text-secondary font-bold tracking-widest uppercase mb-2">
         TESTIMONIALS
       </h5>
@@ -34,7 +34,7 @@ const Testimonials = () => {
         className="pb-16"
       >
         {TESTIMONIALS.map((testimonial, index) => (
-          <SwiperSlide key={testimonial.id || index}>
+          <SwiperSlide className="" key={testimonial.id || index}>
             {({ isActive }) => (
               <TestimonialCard
                 name={testimonial.name}

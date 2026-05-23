@@ -12,7 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Link } from "react-router";
-import { PROCESS_STEPS, SERVICES, MATERIALS } from "../constants";
+import { PROCESS_STEPS, SERVICES, MATERIALS } from "../../constants";
 import { Helmet } from "react-helmet-async";
 
 const fadeUp = {

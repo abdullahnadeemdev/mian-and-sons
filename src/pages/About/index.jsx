@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { homeOne } from "../assets/images";
-import { TEAM_MEMBERS, STORY_IMAGES } from "../constants";
+import { homeOne } from "../../assets/images";
+import { TEAM_MEMBERS, STORY_IMAGES } from "../../constants";
 import { Shield, Target, Users, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 

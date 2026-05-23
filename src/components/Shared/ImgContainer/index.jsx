@@ -4,7 +4,7 @@ const ImgContainer = ({ title, desc, img }) => {
   return (
     <div className="relative aspect-4/5 max-w-40 sm:max-w-60 lg:max-w-80 xl:max-w-115 text-xs md:text-base">
       <div className="bg-black/40 w-full h-full absolute rounded-2xl"></div>
-      <div className="absolute bottom-0 p-2  text-background text-start">
+      <div className="absolute bottom-0 p-2 bg-black/30 text-background text-start">
         <p className="font-semibold mb-1">{title}</p>
         <p className="text-sm lg:text-base">{desc}</p>
       </div>

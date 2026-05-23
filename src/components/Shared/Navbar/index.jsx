@@ -49,6 +49,9 @@ const Navbar = () => {
               <li key={link.label}>
                 <Link
                   to={link.to}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                   className="hover:text-secondary cursor-pointer transition-colors"
                 >
                   {link.label}
